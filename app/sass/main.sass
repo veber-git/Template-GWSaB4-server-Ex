@@ -1,0 +1,47 @@
+@import _fonts
+@import _libs
+@import _vars
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: $clAccent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+body
+    font-family: $default-font
+    font-size: $default-font-size
+    line-height: $default-lineheight
+    color: $clText
+    min-width: 320px
+    position: relative
+    overflow-x: hidden
+ul
+    margin: 0
+    padding: 0
+
+li
+    list-style-type: none
+
+a,
+a:hover,
+a:active,
+a:focus
+    color: $clText
+    text-decoration: none
+//DOCUMENT STYLES
+
+h2
+    background-color: #cfd0f0
+//IMPORT MEDIA SASS
+@import _media

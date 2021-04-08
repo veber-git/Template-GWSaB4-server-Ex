@@ -1,0 +1,17 @@
+@mixin font-connect($fnFamily, $fnFileName, $fnPath, $fnWeight: normal, $fnStyle: normal)
+    @font-face
+        font-family: $fnFamily
+        font-weight: $fnWeight
+        font-style: $fnStyle
+
+        src: local('#{$fnFamily}'),
+        url('../../fonts/#{$fnPath}/#{$fnFileName}.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/#{$fnPath}/#{$fnFileName}.woff') format('woff'),            
+        url('../../fonts/#{$fnPath}/#{$fnFileName}.ttf') format('ttf')
+
+@mixin font-connect-2($fname, $fstyle, $fweight, $furl)
+    @font-face
+        font-family: $fname
+        font-style: $fstyle
+        font-weight: $fweight
+        src: url($furl) format('woff2')
