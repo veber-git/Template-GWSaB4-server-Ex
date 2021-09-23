@@ -57,14 +57,14 @@ function mergerJs() {
 
 //При замене нижестоящей функции на текущую все скрипты будут объединяться в файла app.min.js
 //Минификация производиться не будет
-/*
-function scripts() {
-	return src(['app/js/**/*.js', '!app/js/*.min.js'])
-		.pipe(concat('app.min.js'))
-		.pipe(dest('app/js'))
-		.pipe(browserSync.stream())
-}
-*/
+
+//function scripts() {
+//	return src(['app/js/**/*.js', '!app/js/*.min.js'])
+//		.pipe(concat('app.min.js'))
+//		.pipe(dest('app/js'))
+//		.pipe(browserSync.stream())
+//}
+
 
 function scripts() {
 	return src(['app/js/*.js', '!app/js/*.min.js'])
